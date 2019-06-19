@@ -32,7 +32,7 @@ done
 							serveur='IMIE-CAEN04' #nom du poste
 
 #transfert du fichier dans le repertoire des utilisateurs avec la commande scp
-#sur un poste windows:
+#sur un poste windows: activer ssh dans les services windows
 								scp -r -p /home/$nom/$fichier $serveur@$ip:$fichier
 
 										echo " votre fichier est téléchargé  "
