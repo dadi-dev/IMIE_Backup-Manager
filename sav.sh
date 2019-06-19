@@ -5,7 +5,7 @@
 # ici, les les répertoires d'envoie et de reception sont les repertoires des utilisateurs.
 
 # nous posons un read afin de lancer la fonction de sauvegarde
-				read -p " bonjour, souhaitez vous transférer un fichier? répondez oui ou non : " fct1
+read -p " bonjour, souhaitez vous transférer un fichier? répondez oui ou non : " fct1
 
 							if [ $fct1 != oui ] # si la fonction est non validée par oui
 			then
@@ -28,25 +28,25 @@ done
 
 							if [ $serveur = julien ]
 			then
-							ip='10.5.1.169' #ip du poste distant
-							serveur='IMIE-CAEN04' # nom du poste
+							ip='10.5.1.169' 			#ip du poste distant
+							serveur='IMIE-CAEN04' #nom du poste
 
 #transfert du fichier dans le repertoire des utilisateurs avec la commande scp
 #sur un poste windows:
-									scp -r -p /home/$nom/$fichier $serveur@$ip:$fichier
+								scp -r -p /home/$nom/$fichier $serveur@$ip:$fichier
 
 										echo " votre fichier est téléchargé  "
-				exit 1
+			exit 1
 fi
 							if [ $serveur = thierry ]
-then
-							ip='10.5.1.130' #assignation de l'ip du service maintenance
-							serveur='khatz' # nom du poste
+			then
+							ip='10.5.1.130' 		#assignation de l'ip du service maintenance
+							serveur='khatz' 		#nom du poste
 
 #transfert du fichier dans le repertoire des utilisateurs avec la commande scp
 #sur un poste Linux
-									scp -r -p /home/$nom/$fichier $serveur@$ip:/home/$serveur
+								scp -r -p /home/$nom/$fichier $serveur@$ip:/home/$serveur
 
 										echo " votre fichier est téléchargé  "
-				exit 1
-	fi
+			exit 1
+fi
